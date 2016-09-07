@@ -7,6 +7,9 @@
     <title>Face the Music Slides</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
     <link rel="stylesheet"
         href="css/style.css">
@@ -18,7 +21,33 @@
 </head>
 
 <body>
-  <h1>Victory</h1>
+    <header>
+        <h1>Face the Music</h1>
+        <h2>by Josh Newsom</h2>
+        <nav>
+            <a ui-sref="who"
+                ui-sref-active="active">
+                <span class="fa fa-user"></span> Who?
+            </a>
+            <a ui-sref="why"
+                ui-sref-active="active">
+                <span class="fa fa-question-circle-o"></span> Why?
+            </a>
+            <a ui-sref="what"
+                ui-sref-active="active">
+                <span class="fa fa-wrench"></span> What?
+            </a>
+            <a ui-sref="how"
+                ui-sref-active="active">
+                <span class="fa fa-phone"></span> How?
+            </a>
+        </nav>
+    </header>
+    <main ng-controller="slideCtrl">
+        <arrow direction="left" ng-hide="$root.state === $root.states[0]"></arrow>
+        <section ui-view></section>
+        <arrow direction="right" ng-hide="$root.state === $root.states.slice(-1)[0]"></arrow>
+    </main>
 </body>
 
 </html>
