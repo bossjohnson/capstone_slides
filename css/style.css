@@ -54,4 +54,7 @@ main {
 h1 {
   text-align: center; }
 
+.hidden {
+  visibility: hidden; }
+
 /*# sourceMappingURL=style.css.map */

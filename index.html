@@ -44,9 +44,11 @@
         </nav>
     </header>
     <main ng-controller="slideCtrl">
-        <arrow direction="left" ng-hide="$root.state === $root.states[0]"></arrow>
+        <arrow direction="left"
+            ng-class="{hidden: $root.state === $root.states[0]}"></arrow>
         <section ui-view></section>
-        <arrow direction="right" ng-hide="$root.state === $root.states.slice(-1)[0]"></arrow>
+        <arrow direction="right"
+            ng-class="{hidden: $root.state === $root.states.slice(-1)[0]}"></arrow>
     </main>
 </body>
 
