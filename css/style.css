@@ -2,8 +2,8 @@
   font-family: 'Toxico';
   src: url("../Toxico.otf"); }
 @font-face {
-  font-family: 'National Cartoon';
-  src: url("../NationalCartoon.ttf"); }
+  font-family: 'Sketch Book';
+  src: url("../Sketch Book.ttf"); }
 * {
   box-sizing: border-box;
   margin: 0;
@@ -42,11 +42,11 @@ header {
       border-radius: 50%;
       font-family: 'Toxico';
       font-size: 1.5em;
-      transition: .25s; }
+      transition: 0.25s; }
       header nav a.active {
         color: white;
         background-color: #123652;
-        transition: .25s;
+        transition: 0.25s;
         bottom: 5px; }
       header nav a:hover {
         background-color: #29506d; }
@@ -56,12 +56,45 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px dotted black;
   flex-grow: 1; }
   main section {
     display: flex;
     flex-direction: column;
-    border: 5px dotted blue; }
+    align-items: center;
+    justify-content: space-between;
+    height: 100%; }
+    main section h1 {
+      position: absolute;
+      margin: 1%;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      text-align: center;
+      font-size: 3em;
+      font-family: 'Sketch Book';
+      font-weight: lighter;
+      text-shadow: 0 5px 10px rgba(255, 255, 255, 0.5); }
+    main section h2 {
+      text-align: center;
+      font-size: 3em;
+      background-color: #496d89;
+      color: #042037;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    main section p, main section ul {
+      font-size: 2.5em;
+      padding: 2%;
+      border-radius: 10px;
+      background-color: #123652;
+      color: #718ea4;
+      width: 80%; }
+    main section ul {
+      width: auto;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0; }
+      main section ul li {
+        list-style-position: inside;
+        margin: 2%; }
   main arrow {
     display: inline-block;
     height: 100%;
@@ -80,5 +113,41 @@ h1 {
 
 .joshImg {
   border-radius: 50%; }
+
+.techContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #123652;
+  border-radius: 10px; }
+  .techContainer .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2% 0; }
+    .techContainer .row .techDiv {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10%;
+      font-size: 1.5em;
+      color: #718ea4; }
+      .techContainer .row .techDiv .techIcon {
+        height: 100px; }
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: #123652;
+  border-radius: 10px;
+  padding: 5%;
+  font-size: 3em;
+  white-space: nowrap;
+  color: #496d89; }
+  .contactContainer .contactDiv {
+    margin: 3% 0; }
+    .contactContainer .contactDiv span:nth-of-type(odd) {
+      color: #718ea4; }
 
 /*# sourceMappingURL=style.css.map */
