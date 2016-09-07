@@ -20,36 +20,43 @@
     <script src="js/filters.js"></script>
 </head>
 
-<body>
+<body ng-controller="slideCtrl">
+
     <header>
         <h1>Face the Music</h1>
         <h2>by Josh Newsom</h2>
         <nav>
             <a ui-sref="who"
-                ui-sref-active="active">
+                ui-sref-active="active"
+                ng-click="activateState('who')">
                 <span class="fa fa-user"></span> Who?
             </a>
             <a ui-sref="why"
-                ui-sref-active="active">
+                ui-sref-active="active"
+                ng-click="activateState('why')">
                 <span class="fa fa-question-circle-o"></span> Why?
             </a>
             <a ui-sref="what"
-                ui-sref-active="active">
+                ui-sref-active="active"
+                ng-click="activateState('what')">
                 <span class="fa fa-wrench"></span> What?
             </a>
             <a ui-sref="how"
-                ui-sref-active="active">
+                ui-sref-active="active"
+                ng-click="activateState('how')">
                 <span class="fa fa-phone"></span> How?
             </a>
         </nav>
     </header>
-    <main ng-controller="slideCtrl">
+
+    <main>
         <arrow direction="left"
             ng-class="{hidden: $root.state === $root.states[0]}"></arrow>
         <section ui-view></section>
         <arrow direction="right"
             ng-class="{hidden: $root.state === $root.states.slice(-1)[0]}"></arrow>
     </main>
+
 </body>
 
 </html>

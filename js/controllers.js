@@ -1,7 +1,9 @@
 app.controller('slideCtrl', slideCtrl);
 
 function slideCtrl($scope, $rootScope, $state) {
-    // console.log($rootScope);
+    $scope.activateState = function(state) {
+        $rootScope.state = state;
+    };
 }
 slideCtrl.$inject = ['$scope', '$rootScope', '$state'];
 

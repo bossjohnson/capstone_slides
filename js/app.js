@@ -1,6 +1,7 @@
 var app = angular.module('capstoneSlides', ['ngAnimate', 'ui.router']);
 
 app.run(function($rootScope, $state, $stateParams) {
+        $state.go('who');
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
         $rootScope.states = [
