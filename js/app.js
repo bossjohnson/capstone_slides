@@ -6,9 +6,10 @@ app.run(function($rootScope, $state, $stateParams) {
         $rootScope.$stateParams = $stateParams;
         $rootScope.states = [
             'who',
-            'why',
             'what',
-            'how'
+            'why',
+            'how',
+            'contact'
         ];
         $rootScope.state = 'who';
     })
@@ -20,16 +21,20 @@ app.config(function($stateProvider) {
             url: '/who',
             templateUrl: 'partials/who.html'
         })
-        .state('why', {
-            url: '/why',
-            templateUrl: 'partials/why.html'
-        })
         .state('what', {
             url: '/what',
             templateUrl: 'partials/what.html'
         })
+        .state('why', {
+            url: '/why',
+            templateUrl: 'partials/why.html'
+        })
         .state('how', {
             url: '/how',
             templateUrl: 'partials/how.html'
+        })
+        .state('contact', {
+            url: '/contact',
+            templateUrl: 'partials/contact.html'
         });
 });

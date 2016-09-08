@@ -33,20 +33,25 @@
                 ng-click="activateState('who')">
                 <span class="fa fa-user"></span> Who ?
             </a>
+            <a ui-sref="what"
+                ui-sref-active="active"
+                ng-click="activateState('what')">
+                <span class="fa fa-cog"></span> What ?
+            </a>
             <a ui-sref="why"
                 ui-sref-active="active"
                 ng-click="activateState('why')">
                 <span class="fa fa-question-circle-o"></span> Why ?
             </a>
-            <a ui-sref="what"
-                ui-sref-active="active"
-                ng-click="activateState('what')">
-                <span class="fa fa-wrench"></span> What ?
-            </a>
             <a ui-sref="how"
                 ui-sref-active="active"
                 ng-click="activateState('how')">
-                <span class="fa fa-phone"></span> How ?
+                <span class="fa fa-wrench"></span> How ?
+            </a>
+            <a ui-sref="contact"
+                ui-sref-active="active"
+                ng-click="activateState('contact')">
+                <span class="fa fa-phone"></span> Contact
             </a>
         </nav>
     </header>
